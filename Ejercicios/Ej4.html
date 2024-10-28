@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        background-color: beige;
+        text-align: center;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(196, 137, 196);
+        float: left;
+      }
+      div#general {
+        height: 100vh;
+        width: 100vw;
+        margin: 0 auto;
+        margin-top: 0px;
+        float: none;
+      }
+      div#header {
+        width: 100vw;
+        height: 5vh;
+        background-color: darkolivegreen;
+      }
+      div#header>div {
+        margin-top: 1vh;
+        background-color: darkolivegreen;
+        display: inline;
+        color: white;
+      }
+      div#principal {
+        width: 80vw;
+        height: 90vh;
+        float: left;
+      }
+      div#menu {
+        width: 17.3vw;
+        height: 90vh;
+        background-color: darkturquoise;
+      }
+      div#menu>div {
+        margin-top: 2vh;
+        margin-left: 2vh;
+        background-color: darkturquoise;
+        color: white;
+      }
+      div#institucional {
+        width: 100vw;
+        height: 5vh;
+        background-color: lightcoral;
+        float: left;
+      }
+      #principal>div{
+        border: solid,3px,red;
+        width: 75vw;
+        height: 38vh;
+        margin-top: 3vh;
+        margin-left: 2vh;
+        float: none;
+      }
+      #contenido1>div{
+        border: solid,3px,blue;
+        width: 45%;
+        height: 90%;
+        margin-top: 1.5vh;
+        margin-left: 2vw;
+      }
+      #contenido2>div{
+        border: solid,3px,blue;
+        width: 22vw;
+        height: 22.5vh;
+        margin-top: 2.3vh;
+        margin-left: 1.8vw;
+      }
+    </style>
+    <div id="general">
+      <div id="header">
+        <div>Opción 1</div>
+        <div>Opción 2</div>
+        <div>Opción 3</div>
+        <div>Opción 4</div>
+        <div>Opción 5</div>
+      </div>
+      <div id="menu">
+        <div>Opción 1</div>
+        <div>Opción 2</div>
+        <div>Opción 3</div>
+        <div>Opción 4</div>
+        <div>Opción 5</div>
+      </div>
+      <div id="principal">
+        <div id="contenido1">
+            <div id="sub1-1"></div>
+            <div id="sub1-2"></div>
+        </div>
+        <div id="contenido2">
+            <div id="sub2-1"></div>
+            <div id="sub2-2"></div>
+            <div id="sub2-3"></div>
+        </div>
+      </div>
+      <div id="institucional">Pie de página</div>
+    </div>
+  </body>
+</html>
