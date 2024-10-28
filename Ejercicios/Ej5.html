@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        text-align: center;
+      }
+      #general {
+        width: 960px;
+        margin: 0 auto;
+      }
+      #top {
+        border: solid, 1px, grey;
+        margin-bottom: 3vh;
+      }
+      #cabecera {
+        height: 7vh;
+        background-color: beige;
+        padding-top: 1vh;
+      }
+      #cabecera > * {
+        background-color: beige;
+        text-align: left;
+        margin-left: 2vw;
+      }
+      #menu {
+        background-color: grey;
+        text-align: left;
+      }
+      #menu > div {
+        background-color: grey;
+        margin-left: 1vw;
+        display: inline-block;
+        font-weight: bold;
+        color: blue;
+      }
+      #menu > div:first-child {
+        color: black;
+      }
+      #principal {
+        background-color: white;
+      }
+      #principal > div {
+        background-color: beige;
+      }
+      #content1 {
+        background-color: beige;
+      }
+      #content2 {
+        background-color: beige;
+      }
+      #sidebar {
+        background-color: grey;
+      }
+      #sidebar > div {
+        background-color: grey;
+      }
+      #footer {
+        background-color: white;
+
+        border: solid, 2px, black;
+        border-width: 2px 0 0 0;
+      }
+    </style>
+    <div id="general">
+      <div id="top">
+        <div id="cabecera">
+          <h1>Este es el título principal del sitio web</h1>
+        </div>
+        <div id="menu">
+            <div>Principal</div>
+            <div>Fotos</div>
+            <div>Videos</div>
+            <div>Contactos</div>
+          </div>
+      </div>
+      
+      <div id="principal">
+        <div id="content1">Contenido1</div>
+        <div id="content2">Contenido2</div>
+      </div>
+
+      <div id="sidebar">
+        <div>Opción 1</div>
+        <div>Opción 2</div>
+        <div>Opción 3</div>
+        <div>Opción 4</div>
+        <div>Opción 5</div>
+      </div>
+      <div id="footer">Pie de página</div>
+    </div>
+  </body>
+</html>
