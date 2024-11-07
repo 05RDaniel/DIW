@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-  </head>
-  <body>
     <style>
       * {
         margin: 0;
@@ -18,8 +16,8 @@
         margin: 0 auto;
       }
       #top {
-        border: solid, 1px, grey;
-        margin-bottom: 3vh;
+        border: solid 1px grey; /* corregido */
+        margin-top: 1vh;
       }
       #cabecera {
         height: 7vh;
@@ -38,64 +36,123 @@
       #menu > div {
         background-color: grey;
         margin-left: 1vw;
-        display: inline-block;
+        display: inline;
         font-weight: bold;
         color: blue;
       }
       #menu > div:first-child {
         color: black;
       }
-      #principal {
-        background-color: white;
+
+      #main {
+        display: table;
+        width: 100%;
+        margin-top: 2vh;
       }
-      #principal > div {
-        background-color: beige;
+      #contents,
+      #sidebar {
+        display: table-cell;
+        vertical-align: top;
       }
-      #content1 {
+      #contents {
+        height: 54.2vh;
+        width: 37vw;
+        margin-right: 1.5vw;
+        margin-left: 1.5vw;
+      }
+      #content1,
+      #content2 {
+        padding: 1vh;
         background-color: beige;
+        width: 35vw;
+        margin-left: 3vh;
+      }
+      #content1>*,
+      #content2>* {
+        background-color: beige;
+        text-align: left;
       }
       #content2 {
-        background-color: beige;
+        margin-top: 6vh;
       }
+
       #sidebar {
+        width: 10.8vw;
+        display: inline-block;
         background-color: grey;
+        padding: 1vh;
       }
       #sidebar > div {
         background-color: grey;
+        text-align: left;
       }
       #footer {
         background-color: white;
-
-        border: solid, 2px, black;
-        border-width: 2px 0 0 0;
+        border-top: solid 2px black; /* corregido */
+      }
+      #pubDate{
+        color: lightgrey;
+      }
+      #imgFooter{
+        font-style: italic;
+      }
+      #img{
+        border: solid,1px,black;
+      }
+      #img>*{
+        background-color: beige;
+        text-align: left;
+      }
+      #comments{
+        text-align: right;
       }
     </style>
+  </head>
+  <body>
     <div id="general">
       <div id="top">
         <div id="cabecera">
           <h1>Este es el título principal del sitio web</h1>
         </div>
         <div id="menu">
-            <div>Principal</div>
-            <div>Fotos</div>
-            <div>Videos</div>
-            <div>Contactos</div>
-          </div>
-      </div>
-      
-      <div id="principal">
-        <div id="content1">Contenido1</div>
-        <div id="content2">Contenido2</div>
+          <div>Principal</div>
+          <div>Fotos</div>
+          <div>Videos</div>
+          <div>Contactos</div>
+        </div>
       </div>
 
-      <div id="sidebar">
-        <div>Opción 1</div>
-        <div>Opción 2</div>
-        <div>Opción 3</div>
-        <div>Opción 4</div>
-        <div>Opción 5</div>
+      <div id="main">
+        <div id="contents">
+          <div id="content1">
+            <h2>Título del mensaje uno</h2>
+            <h3>Subtítulo del mensaje uno</h3>
+            <p id="pubDate">publicado 13-10-2023</p>
+            <hr>
+            <p>Este es el texto de mi primer mensaje</p>
+            <div id="img">
+              <img src="Caballero.png" width="200px">
+            <p id="imgFooter">esta es la imagen del primer mensaje</p>
+            </div>
+            <p id="comments">comentarios(0)</p>
+          </div>
+          <div id="content2">
+            <h2>Título del mensaje dos</h2>
+            <h3>Subtítulo del mensaje dos</h3>
+            <p id="pubDate">publicado 15-12-2023</p>
+            <hr>
+            <p>Este es el texto de mi segundo mensaje</p>
+            <p id="comments">comentarios(0)</p>
+          </div>
+        </div>
+
+        <div id="sidebar">
+          <div>Mensaje número uno</div>
+          <div>Mensaje número dos</div>
+        </div>
       </div>
-      <div id="footer">Pie de página</div>
+
+      <div id="footer">Derechos reservados © 2024-2025</div>
     </div>
   </body>
 </html>
