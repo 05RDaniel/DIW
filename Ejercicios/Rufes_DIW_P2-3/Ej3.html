@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        background-color: beige;
+        text-align: center;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(196, 137, 196);
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      div#general {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      div#header {
+        width: 100%;
+        height: 5vh;
+        background-color: darkolivegreen;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      div#header>div {
+        background-color: darkolivegreen;
+        height: 50%;
+        color: white;
+      }
+      div#principal {
+        width: 80%;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+      }
+      div#menu {
+        width: 14%;
+        height: 90vh;
+        background-color: darkturquoise;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+      }
+      div#menu>div {
+        background-color: darkturquoise;
+        color: white;
+        font-size:x-large;
+        width: 100%;
+      }
+      div#institucional {
+        width: 100%;
+        height: 5vh;
+        background-color: lightcoral;
+      }
+      #principal>div{
+        border: solid,3px,red;
+        width: 75%;
+        height: 38vh;
+      }
+      #contenido1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #contenido2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #contenido1>div{
+        border: solid,3px,blue;
+        width: 45%;
+        height: 90%;
+      }
+      #contenido2>div{
+        border: solid,3px,blue;
+        width: 30%;
+        height: 32.5vh;
+      }
+    </style>
+    <div id="general">
+      <div id="header">
+        <div>Opción 1</div>
+        <div>Opción 2</div>
+        <div>Opción 3</div>
+        <div>Opción 4</div>
+        <div>Opción 5</div>
+      </div>
+      <div id="menu">
+        <div>Opción 1</div>
+        <div>Opción 2</div>
+        <div>Opción 3</div>
+        <div>Opción 4</div>
+        <div>Opción 5</div>
+      </div>
+      <div id="principal">
+        <div id="contenido1">
+            <div id="sub1-1"></div>
+            <div id="sub1-2"></div>
+        </div>
+        <div id="contenido2">
+            <div id="sub2-1"></div>
+            <div id="sub2-2"></div>
+            <div id="sub2-3"></div>
+        </div>
+      </div>
+      <div id="institucional">Pie de página</div>
+    </div>
+  </body>
+</html>

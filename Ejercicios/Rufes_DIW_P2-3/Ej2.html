@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        background-color: beige;
+        text-align: center;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(196, 137, 196);
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      div#general {
+        height: 75vh;
+        width: 980px;
+        background-color: beige;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      div#header {
+        width: 100%;
+        height: 5.3vh;
+        background-color: darkolivegreen;
+      }
+
+      div#principal {
+        width: 80%;
+        height: 65vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+      }
+      #principal > div {
+        border: solid, 3px, red;
+        width: 90%;
+        height: 27.5vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+      }
+      #contenido1 > div {
+        border: solid, 3px, blue;
+        width: 45%;
+        height: 22.5vh;
+      }
+      #contenido2 > div {
+        border: solid, 3px, blue;
+        width: 28%;
+        height: 22.5vh;
+      }
+
+      div#menu {
+        width: 20%;
+        height: 65vh;
+        background-color: turquoise;
+      }
+
+      div#institucional {
+        width: 100%;
+        height: 5vh;
+        background-color: lightcoral;
+      }
+    </style>
+    <div id="general">
+      <div id="header">Header</div>
+      <div id="menu">Aside</div>
+      <div id="principal">
+        Main
+        <div id="contenido1">
+          <div id="sub1-1"></div>
+          <div id="sub1-2"></div>
+        </div>
+        <div id="contenido2">
+          <div id="sub2-1"></div>
+          <div id="sub2-2"></div>
+          <div id="sub2-3"></div>
+        </div>
+      </div>
+      <div id="institucional">Pie de página</div>
+    </div>
+  </body>
+</html>
