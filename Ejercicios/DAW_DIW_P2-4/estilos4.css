@@ -1,5 +1,24 @@
-@media all and (max-width: 475px) {
-    nav ul {
-    display: none;
+/* Diseño a una columna */
+@media all and (max-device-width: 600px) {
+    * {
+        background-color: red;
+    }
+
+    h2{
+        border-bottom: 1px solid black;
+    }
+}
+
+/* Diseño a dos columnas */
+@media all and (max-device-width: 1200px) and (min-device-width: 600px) {
+    * {
+        background-color: blue;
+    }
+}
+
+/* Diseño a tres columnas */
+@media all and (min-device-width: 1200px) {
+    * {
+        background-color: gray;
     }
 }
