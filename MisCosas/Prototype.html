@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Move Buddy</title>
+    <style>
+      #buddy {
+        background-color: red;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 500px;
+        left: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="buddy"></div>
+    <script>
+      const buddy = document.getElementById("buddy");
+      crouch = false;
+      let keysPressed = {}; // Almacenar el estado de las teclas
+      let animationFrame;
+      let isJumping = false; // Controlar si ya está saltando
+
+      document.addEventListener("keydown", (event) => {
+        keysPressed[event.key] = true; // Registrar la tecla presionada
+        if (!animationFrame) {
+          moveBuddy(); // Iniciar el movimiento
+        }
+      });
+
+      document.addEventListener("keyup", (event) => {
+        keysPressed[event.key] = false; // Registrar que la tecla se soltó
+        if (!Object.values(keysPressed).includes(true)) {
+          cancelAnimationFrame(animationFrame); // Detener la animación si no hay teclas presionadas
+          animationFrame = null;
+        }
+      });
+
+      async function jump() {
+        if (isJumping) return; // Evitar múltiples saltos simultáneos
+        isJumping = true;
+        let topValue = parseInt(window.getComputedStyle(buddy).top, 10);
+
+        // Mover hacia arriba
+        for (let i = 0; i < 70; i++) {
+          if (i >= 20) {
+            topValue -= 2;
+          } else {
+            topValue -= 4;
+          }
+          buddy.style.top = topValue + "px";
+          await sleep(3); // Pausa breve para animación suavead
+        }
+
+        // Mover hacia abajo
+        for (let i = 0; i < 70; i++) {
+          if (i < 50) {
+            topValue += 2;
+          } else {
+            topValue += 4;
+          }
+          buddy.style.top = topValue + "px";
+          await sleep(3); // Pausa breve para animación suave
+        }
+
+        isJumping = false; // Permitir futuros saltos
+      }
+
+      function sleep(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+
+      function uncrouch() {
+        if (crouch === true) {
+          crouch = false;
+          buddy.style.height = "50px";
+        }
+        requestAnimationFrame(uncrouch); // Llamar a la función de nuevo
+      }
+
+      // Iniciar la ejecución constante
+      requestAnimationFrame(uncrouch);
+
+      function moveBuddy() {
+        let leftValue = parseInt(window.getComputedStyle(buddy).left, 10);
+        let topValue = parseInt(window.getComputedStyle(buddy).top, 10);
+
+        if (keysPressed[" "]) {
+          jump(); // Llamar a la función de salto
+        }
+        if (keysPressed["a"] || keysPressed["ArrowLeft"]) {
+          buddy.style.left = leftValue - 5 + "px"; // Mover hacia la izquierda
+        }
+        if (keysPressed["d"] || keysPressed["ArrowRight"]) {
+          buddy.style.left = leftValue + 5 + "px"; // Mover hacia la derecha
+        }
+        if (keysPressed["s"] || keysPressed["ArrowDown"]) {
+          buddy.style.height = "25px";
+          crouch = true;
+        }
+
+        animationFrame = requestAnimationFrame(moveBuddy); // Continuar animación
+      }
+    </script>
+  </body>
+</html>
