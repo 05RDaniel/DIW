@@ -19,10 +19,10 @@
     <div id="buddy"></div>
     <script>
       const buddy = document.getElementById("buddy");
-      crouch = false;
+      let crouch = false; // Estado de agachado
+      let isJumping = false; // Estado de salto
       let keysPressed = {}; // Almacenar el estado de las teclas
       let animationFrame;
-      let isJumping = false; // Controlar si ya está saltando
 
       document.addEventListener("keydown", (event) => {
         keysPressed[event.key] = true; // Registrar la tecla presionada
@@ -52,7 +52,7 @@
             topValue -= 4;
           }
           buddy.style.top = topValue + "px";
-          await sleep(3); // Pausa breve para animación suavead
+          await sleep(3); // Pausa breve para animación suave
         }
 
         // Mover hacia abajo
@@ -74,11 +74,13 @@
       }
 
       function uncrouch() {
-        if (crouch === true) {
+        if (crouch === true && !keysPressed["s"] && !keysPressed["ArrowDown"]) {
           crouch = false;
           buddy.style.height = "50px";
+          buddy.style.top =
+            parseInt(window.getComputedStyle(buddy).top, 10) - 25 + "px"; // Restaurar altura y posición
         }
-        requestAnimationFrame(uncrouch); // Llamar a la función de nuevo
+        requestAnimationFrame(uncrouch); // Continuar verificando
       }
 
       // Iniciar la ejecución constante
@@ -98,8 +100,11 @@
           buddy.style.left = leftValue + 5 + "px"; // Mover hacia la derecha
         }
         if (keysPressed["s"] || keysPressed["ArrowDown"]) {
-          buddy.style.height = "25px";
-          crouch = true;
+          if (!crouch) {
+            buddy.style.height = "25px";
+            buddy.style.top = topValue + 25 + "px"; // Ajustar hacia abajo
+            crouch = true;
+          }
         }
 
         animationFrame = requestAnimationFrame(moveBuddy); // Continuar animación

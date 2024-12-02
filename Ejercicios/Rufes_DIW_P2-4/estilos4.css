@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 2%;
+}
+
+#content li {
+    color: blue;
+}
+
+strong {
+    color: black;
+}
+
+body {
+    margin: 2%;
+}
+
+/* Diseño a una columna */
+@media all and (max-device-width: 600px) {
+    h1 {
+        width: 85vw;
+        margin-bottom: 2vh;
+    }
+
+    h2 {
+        border-bottom: 1px solid black;
+        margin-bottom: 2vh;
+    }
+
+    li {
+        list-style: none;
+        margin-bottom: 2%;
+    }
+
+    strong {
+        display: block;
+    }
+
+}
+
+/* Diseño a dos columnas */
+@media all and (max-device-width: 1200px) and (min-device-width: 601px) {
+    #main {
+        display: flex;
+    }
+
+    h1 {
+        margin-bottom: 2vh;
+    }
+
+    h2 {
+        margin-bottom: 2vh;
+    }
+
+    li {
+        margin-bottom: 2vh;
+    }
+
+    #sidebar strong {
+        display: block;
+    }
+
+    #sidebar li {
+        list-style-type: none;
+    }
+
+    #content li {
+        margin: 2vh 2vw;
+    }
+
+    #content {
+        margin: 2vh 5vw;
+    }
+
+    #content li::marker {
+        color: black;
+    }
+}
+
+/* Diseño a tres columnas */
+@media all and (min-device-width: 1201px) {
+    #main {
+        display: flex;
+    }
+
+    #content {
+        display: flex;
+    }
+
+    h1 {
+        margin-bottom: 2%;
+    }
+
+    h2 {
+        margin-bottom: 2%;
+    }
+
+    #content div,
+    #sidebar {
+        margin: 0 2vw;
+    }
+}

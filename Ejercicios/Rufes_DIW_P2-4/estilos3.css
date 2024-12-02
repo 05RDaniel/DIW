@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 80%;
+    margin: 0 auto;
+}
+div{
+}
+#header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+#main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#sidebar{
+    width: 25%;
+}
+#sidebar ul{
+    margin-left: 25px;
+}
+#content{
+    width: 75%;;
+}
+p{
+    margin: 10px 0px;
+}
+#content ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+#content ul li{
+    width: 33%;
+}

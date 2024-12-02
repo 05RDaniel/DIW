@@ -1,0 +1,111 @@
+1.- Idea -->> Venta de casas en el bosque
+2.- Imágenes -->> Pixabay "casas bosque"
+3.- Logo -->> Pixabay vectoriales SVG "casas"
+4.- Favicon con logo
+5.- Boceto en movil -->> EsquemaXS
+6.- Variables CSS:
+6.1.- Tipografía:
+fuente-principal -> Pacifico
+fuente-alternativa -> sans-serif
+6.2.- Tamaños:
+tam-fuente-xs -> 12px
+tam-max-contenedor-x -> 1200px
+tam-alto-encabezado-xs -> 8vh
+6.3.- Colores (buscar con utilidad adobe):
+fondo-encabezado ->B8D2F4
+fondo-menu ->894B26
+fondo-todo ->
+negro -> #000
+blanco -> #FFF
+color-texto ->517104
+color-titulos-claro ->2CDA1C
+color-titulos-oscuro->1F411C
+color-primario ->517104
+color-secundario ->83A705
+color-opuesto-primario ->894B26
+color-opuesto-secundario ->F58A03
+7.- HTML con VSCode:
+7.1.- Meta Tags más importantes:
+<meta http-equiv="Content-Language" content="es" />
+<meta name="description" content="Casas en el Bosque es una página web de prueba en el Curso de Desarrollo de Aplicaciones con Tecnología Web"/>
+<meta name="keywords" content="casas, bosque, naturaleza, comodidad, casas en el bosque, casas en la naturaleza" />
+<meta name="author" content="Desarrollo de Aplicaciones con Tecnología Web" />
+<meta name="copyright" content="Desarrollo de Aplicaciones con Tecnología Web" />
+<meta name="robots" content="noindex,nofollow" />  ***Podriamos index para que la indexaran. Podriamos follow para que siga subpáginas***
+<meta http-equiv="cache-control" content="no-cache"/> **Pondremos esta meta si actualizamos diaríamente el contenido de la web ***
+7.2.- <title>Casas en el bosque | La casa de tus sueños</title>
+7.3.- Los favicons
+7.4.- Google Fonts
+7.5.- <link rel="stylesheet" href="css/estilos.css">
+8.- CSS3 - Esquema:
+
+:root {
+    --fuente-principal: 'Pacifico';
+    --fuente-alternativa: sans-serif;
+    --tam-fuente-xs: 12px;
+    --tam-fuente-sm: 13px;
+    --tam-fuente-md: 15px;
+    --tam-fuente-lg: 17px;
+    --tam-fuente-xl: 17px;
+    --tam-max-contenedor-x: 1200px;
+    --tam-alto-encabezado-xs: 8vh;
+    --negro: #000;
+    --blanco: #FFF;
+    --fondo-encabezado: #B8D2F4;
+    --fondo-menu: var(--blanco);
+    --fondo-todo: var(--fondo-encabezado);
+    --color-texto: #517104;
+    --color-titulos-claro: #2CDA1C;
+    --color-titulos-oscuro: #1F411C;
+    --color-primario: #517104;
+    --color-secundario: #83A705;
+    --color-opuesto-primario: #894B26;
+    --color-opuesto-secundario: #F58A03;
+    --color-enlace: var(--color-opuesto-primario);
+    --color-enlace-hover: var(--color-opuesto-secundario);
+    --color-transparencia: rgba(0, 0, 0, 0.5);
+}
+
+html {
+    font-family: var(--fuente-principal), var(--fuente-alternativa);
+    font-size: var(--tam-fuente-xs);
+    background-color: var(--fondo-todo);
+    color: var(--color-texto);
+}
+
+*,
+:after,
+:before {
+    padding: 0;
+    margin: 0
+}
+body {
+    overflow-x: hidden;
+}
+#inicio,#nosotros,#contacto{
+    width: 100%;
+    height: 100vh;
+}
+
+/* Media queries sm */
+
+@media (min-width: 576px) {
+}
+/* Media queries md */
+
+@media (min-width: 768px) {
+}
+/* Media queries lg */
+
+@media (min-width: 992px) {
+}
+/* Media queries xl */
+
+@media (min-width: 1200px) {
+}
+
+9.- Desarrollar la web para móvil
+10.- Cambios tamaños más grandes.
+11.- Mejoras finales (texturas fondos, etc); -->> prweb01-2
+12.- FontAwesome y mejoras formulario
+13.- Comprimir y subir página a un servidor;
