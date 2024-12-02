@@ -1,0 +1,88 @@
+:root {
+    --fuente-principal: 'Pacifico';
+    --fuente-alternativa: sans-serif;
+    --tam-fuente-xs: 12px;
+    --tam-fuente-sm: 13px;
+    --tam-fuente-md: 15px;
+    --tam-fuente-lg: 17px;
+    --tam-fuente-xl: 17px;
+    --tam-max-contenedor-x: 1200px;
+    --tam-alto-encabezado-xs: 8vh;
+    --negro: #000;
+    --blanco: #FFF;
+    --fondo-encabezado: #B8D2F4;
+    --fondo-menu: var(--blanco);
+    --fondo-todo: var(--fondo-encabezado);
+    --color-texto: #517104;
+    --color-titulos-claro: #2CDA1C;
+    --color-titulos-oscuro: #1F411C;
+    --color-primario: #517104;
+    --color-secundario: #83A705;
+    --color-opuesto-primario: #894B26;
+    --color-opuesto-secundario: #F58A03;
+    --color-enlace: var(--color-opuesto-primario);
+    --color-enlace-hover: var(--color-opuesto-secundario);
+    --color-transparencia: rgba(0, 0, 0, 0.5);
+}
+
+html {
+    font-family: var(--fuente-principal), var(--fuente-alternativa);
+    font-size: var(--tam-fuente-xs);
+    background-color: var(--fondo-todo);
+    color: var(--color-texto);
+}
+
+div {
+    border: solid 3px black;
+    width: 100%;
+}
+
+#home{
+    width: 100%;
+    height: 100vh;
+}
+
+#header{
+    
+    background-color: var(--fondo-encabezado);
+    display: flex;
+    align-items: center;
+}
+
+#header img{
+    width: 100px;
+    margin: 0;
+}
+
+*,
+:after,
+:before {
+    /* font-size: var(--tam-fuente-xs); */
+    font-size: 20px;
+    padding: 0;
+    margin: 0
+}
+body {
+    overflow-x: hidden;
+}
+#inicio,#nosotros,#contacto{
+    width: 100%;
+    height: 100vh;
+}
+
+/* Media queries sm */
+
+@media (min-width: 576px) {
+}
+/* Media queries md */
+
+@media (min-width: 768px) {
+}
+/* Media queries lg */
+
+@media (min-width: 992px) {
+}
+/* Media queries xl */
+
+@media (min-width: 1200px) {
+}
