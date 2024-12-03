@@ -1,11 +1,12 @@
+/* VARIABLES */
 :root {
     --fuente-principal: 'Pacifico';
     --fuente-alternativa: sans-serif;
-    --tam-fuente-xs: 12px;
-    --tam-fuente-sm: 13px;
-    --tam-fuente-md: 15px;
-    --tam-fuente-lg: 17px;
-    --tam-fuente-xl: 17px;
+    --tam-fuente-xs: 15px;
+    --tam-fuente-sm: 16px;
+    --tam-fuente-md: 18px;
+    --tam-fuente-lg: 20px;
+    --tam-fuente-xl: 20px;
     --tam-max-contenedor-x: 1200px;
     --tam-alto-encabezado-xs: 8vh;
     --negro: #000;
@@ -25,6 +26,13 @@
     --color-transparencia: rgba(0, 0, 0, 0.5);
 }
 
+/* GENERAL */
+* {
+    font-size: var(--tam-fuente-xs);
+    padding: 0;
+    margin: 0
+}
+
 html {
     font-family: var(--fuente-principal), var(--fuente-alternativa);
     font-size: var(--tam-fuente-xs);
@@ -33,56 +41,265 @@ html {
 }
 
 div {
-    border: solid 3px black;
     width: 100%;
 }
 
-#home{
-    width: 100%;
-    height: 100vh;
-}
-
-#header{
-    
-    background-color: var(--fondo-encabezado);
-    display: flex;
-    align-items: center;
-}
-
-#header img{
-    width: 100px;
-    margin: 0;
-}
-
-*,
-:after,
-:before {
-    /* font-size: var(--tam-fuente-xs); */
-    font-size: 20px;
-    padding: 0;
-    margin: 0
-}
 body {
     overflow-x: hidden;
 }
-#inicio,#nosotros,#contacto{
-    width: 100%;
-    height: 100vh;
+
+* {
+    font-size: 2.5rem;
 }
+
+.text{
+    text-align: left;
+    font-size: var(--tam-fuente-xs);
+}
+
+    /* HOME */
+    #home {
+        width: 100%;
+        height: 100vh;
+        border: solid black 1px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+        /* HEADER */
+        #header {
+            background-color: var(--fondo-encabezado);
+            display: flex;
+            align-items: center;
+        }
+
+        #header img {
+            width: 100px;
+            margin: 0;
+        }
+
+        /* MENU */
+        #menu {
+            text-align: center;
+            background-color: white;
+        }
+
+        #menu li {
+            height: 6.5vh;
+            margin: 0.5vh;
+            list-style: none;
+        }
+
+        #menu li a {
+            text-decoration: none;
+            color: var(--color-opuesto-primario);
+        }
+
+        #menu li:not(:last-child) {
+            border-bottom: solid 1px var(--color-opuesto-primario);
+        }
+
+        /* INICIO */
+        #inicio{
+            height:100%;
+            display: flex;
+            align-items:center;
+            justify-content:center;
+            border: black 1px solid;
+            background-image:url(./img/casa-bosque-xs.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        #inicio #title {
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            height: 33vh;
+            width: 75%;
+            border: solid 0.5px var(--color-titulos-claro);
+            border-radius: 10%;
+            text-align: center;
+            font-weight: bold;
+            background-color: var(--color-transparencia);
+            color: var(--color-titulos-claro);
+        }
+
+    /* SOBRE NOSOTROS */
+        #aboutus{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-image: url(./img/texture-1674066_640.jpg);
+        }
+        #aboutus p{
+            text-align: center;
+            color: var(--color-texto);
+        }
+        #aboutus img{
+            width: 80%;
+            height: auto;
+            border-radius: 5%;
+            margin-top: 25%;
+        }
+
+        /* CONTENIDO */
+        #content{
+            width: 80%;
+            margin: 0 10%;
+        }
+
+    /* MODELOS */
+    #models{
+        padding-top: 1vh;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: white;
+    }
+    #models img{
+        width: 100%;
+    }
+    
+        /* BASICO */
+        #basic{
+            margin-top: 2vh;
+            height: 40vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #basic #text{
+            width: 80%;
+        }
+
+        /* GRANDE */
+        #big{
+            margin-top: 2vh;
+            height: 60vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #big #text{
+            width: 80%;
+        }
+
+        /* CON LAGO */
+        #lake{
+            margin-top: 2vh;
+            height: 75vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-bottom: 3vh;
+        }
+        #lake #text{
+            width: 80%;
+        }
+
+    /* IMAGENES */
+    #images{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 5vh;
+        background-image: url(./img/texture-1674066_640.jpg);
+    }
+    #images img{
+        width: 80%;
+        height: auto;
+        border-radius: 5%;
+        margin-top: 4vh;
+    }
+
+    /* ESCRÍBENOS */
+    #writeus{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 5vh;
+        background-image: url(./img/contacto-xs.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 88vh;
+    }
+    #writeus p{
+        color: var(--color-opuesto-primario);
+    }
+    #writeus>*{
+        margin: 5vh 0;
+    }
+    
+        /* FORMULARIO */
+        #form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 75%;
+            background-color: var(--color-transparencia);
+            padding: 5vh 0;
+            border-radius: 5%;
+        }
+        #form p,label{
+            color: var(--blanco);
+        }
+        #form form{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+        }
+        #form form textarea{
+            resize: none;
+        }
+        #form form {
+            margin-top: 5vh;
+        }
+        #form form *{
+            margin-bottom: 1vh;
+        }
+        #form #submit{
+        font-size: var(--tam-fuente-xs);
+        }
+
+    /* FOOTER */
+    #footer{
+        height: 7.5vh;
+        background-color: var(--color-opuesto-primario);
+        color: var(--blanco);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* ARROW */
+    #arrow{
+        width: 5vh;
+        position: fixed;
+        bottom: 1vh;
+        right: 2%;
+    }
 
 /* Media queries sm */
 
-@media (min-width: 576px) {
-}
+@media (min-width: 576px) {}
+
 /* Media queries md */
 
-@media (min-width: 768px) {
-}
+@media (min-width: 768px) {}
+
 /* Media queries lg */
 
-@media (min-width: 992px) {
-}
+@media (min-width: 992px) {}
+
 /* Media queries xl */
 
-@media (min-width: 1200px) {
-}
+@media (min-width: 1200px) {}
