@@ -106,7 +106,6 @@ body {
             display: flex;
             align-items:center;
             justify-content:center;
-            border: black 1px solid;
             background-image:url(./img/casa-bosque-xs.jpg);
             background-repeat: no-repeat;
             background-size: cover;
@@ -286,6 +285,7 @@ body {
         position: fixed;
         bottom: 1vh;
         right: 2%;
+        border: black 1px solid;
     }
 
 /* Media queries sm */
