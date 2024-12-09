@@ -277,6 +277,7 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        border: 1px solid black;
     }
 
     /* ESCRÍBENOS */
@@ -363,6 +364,86 @@ body {
 /* Media queries md */
 
 @media (min-width: 768px) {
+
+    /* GENERAL */
+
+* {
+    font-size: 3.5rem;
+}
+
+    /* HOME */
+
+        /* HEADER */
+
+        #header img {
+            width: 14vh;
+        }
+
+        /* MENU */
+
+        #menu li {
+            height: 7.5vh;
+            margin: 0;
+            padding-top: 2vh;
+        }
+
+        /* SOBRE NOSOTROS */
+
+            /* IMAGEN */
+
+            #casaCielo{
+                height: 100%;
+                background-image: url(./img/casa-cielo-md.jpg);
+            }
+
+    /* MODELOS */
+
+        /* IMAGEN */
+
+        #casaBasica{
+            height: 40vh;
+        }
+    
+        /* BASICO */
+        #basic{
+            height: 20vh;
+        }
+
+        /* GRANDE */
+        #big{
+            height: 50vh;
+        }
+        #big .text{
+            width: 80%;
+        }
+
+        /* CON LAGO */
+        #lake{
+            height: 65vh;
+        }
+        #lake .text{
+            width: 80%;
+        }
+
+    /* IMAGENES */
+    #images div{
+        height: 40vh;
+    }
+
+    /* ESCRÍBENOS */
+    
+        /* FORMULARIO */
+        #form{
+            height: 100%;
+        }
+        #form p,label{
+            color: var(--blanco);
+        }
+        #form #submit{
+        font-size: var(--tam-fuente-sm);
+        }
+
+    
 }
 
 /* Media queries lg */

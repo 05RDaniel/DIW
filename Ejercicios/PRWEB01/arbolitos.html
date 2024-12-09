@@ -25,7 +25,7 @@
     />
     <meta name="robots" content="noindex,nofollow" />
     <meta http-equiv="cache-control" content="no-cache" />
-    <link rel="stylesheet" href="arbolitos.css" />
+    <link rel="stylesheet" href="arbolitos2.css" />
     <title>Document</title>
   </head>
   <body>
@@ -63,12 +63,12 @@
           interdum. Aliquam in facilisis quam. Nunc euismod porttitor mi et
           hendrerit.
         </p>
+        <div id="casaCielo"></div>
       </div>
-      <img src="./img/casa-cielo-xs.jpg" />
     </div>
     <div id="models">
       <p>Conoce nuestros modelos</p>
-      <img src="./img/casa-basica-xs.jpg" />
+      <div id="casaBasica"></div>
       <div id="basic">
         <p>Casas Básicas</p>
         <p class="text">
@@ -90,7 +90,7 @@
           bibendum, placerat urna. Nunc ullamcorper diam ut leo dictum, ac
           tincidunt nulla maximus.
         </p>
-        <img src="./img/casa-grande-xs.jpg" />
+        <div id="casaGrande"></div>
       </div>
       <div id="lake">
         <p>Junto al Lago</p>
@@ -102,22 +102,22 @@
           bibendum, placerat urna. Nunc ullamcorper diam ut leo dictum, ac
           tincidunt nulla maximus.
         </p>
-        <img src="./img/casa-lago-xs.jpg" />
+        <div id="casaLago"></div>
       </div>
     </div>
     <div id="images">
       <p>Galería de imagenes</p>
-      <img src="./img/alone-1867464-xs.jpg" />
-      <img src="./img/architecture-1836070-xs.jpg" />
-      <img src="./img/autumn-1748644-xs.jpg" />
-      <img src="./img/apartment-3564955-xs.jpg" />
-      <img src="./img/country-house-540796-xs.jpg" />
-      <img src="./img/large-home-389271-xs.jpg" />
+      <div id="alone"></div>
+      <div id="architecture"></div>
+      <div id="autumn"></div>
+      <div id="apartment"></div>
+      <div id="country"></div>
+      <div id="largeHome"></div>
     </div>
     <div id="writeus">
       <p>¡¡Escríbenos!!</p>
       <div id="form">
-        <p class="text">Casas en el bosque</p>
+        <p>Casas en el bosque</p>
         <p class="text">email@casasenelbosque.com</p>
         <p class="text">Telf:034-961-234-567</p>
         <form>
@@ -140,22 +140,24 @@
         </form>
       </div>
     </div>
-    <div id="footer"><p class="text">Todos los derechos reservados 2024</p></div>
-    <img src="./img/arrow-24846.svg" id="arrow">
+    <div id="footer">
+      <p class="text">Todos los derechos reservados 2024</p>
+    </div>
+    <img src="./img/arrow-24846.svg" id="arrow" />
     <script>
-      const arrow = document.getElementById('arrow');
-      const home = document.getElementById('home');
-      arrow.style.display='none';
-      arrow.addEventListener('click', () => {
-        home.scrollIntoView({ behavior:'smooth' });
+      const arrow = document.getElementById("arrow");
+      const home = document.getElementById("home");
+      arrow.style.display = "none";
+      arrow.addEventListener("click", () => {
+        home.scrollIntoView({ behavior: "smooth" });
       });
 
-      window.addEventListener('scroll', () => {
+      window.addEventListener("scroll", () => {
         y = window.scrollY;
         if (y < 100) {
-          arrow.style.display='none';
+          arrow.style.display = "none";
         } else {
-          arrow.style.display='block';
+          arrow.style.display = "block";
         }
       });
     </script>
