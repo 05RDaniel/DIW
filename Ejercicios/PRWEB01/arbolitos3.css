@@ -49,7 +49,7 @@ body {
 }
 
 * {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
 
 .text{
@@ -61,7 +61,6 @@ body {
     #home {
         width: 100%;
         height: 100vh;
-        border: solid black 1px;
         display: flex;
         flex-direction: column;
 
@@ -277,7 +276,7 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        border: 1px solid black;
+        border: solid black 1px;
     }
 
     /* ESCRÍBENOS */
@@ -344,11 +343,12 @@ body {
     /* ARROW */
     #arrow{
         width: 5vh;
+        height: 5vh;
         position: fixed;
-        bottom: 1vh;
-        right: 2%;
+        bottom: 20px;
+        right: 20px;
+        background-image: url(./img/arrow-24846.svg);
     }
-
 
 
 
@@ -360,6 +360,8 @@ body {
 /* Media queries sm */
 
 @media (min-width: 576px) {
+
+    /* GENERAL */
     .text{
         font-size: var(--tam-fuente-sm);
     }
@@ -367,7 +369,14 @@ body {
     #inicio{
         background-image:url(./img/casa-bosque-sm.jpg);
     }
+
+    /* ESCRÍBENOS */
+    #writeus{
+        height: 90vh;
+    }
 }
+
+
 
 
 
@@ -383,7 +392,7 @@ body {
     /* GENERAL */
 
 * {
-    font-size: 3.5rem;
+    font-size: 2rem;
 }
 
     /* HOME */
@@ -443,10 +452,11 @@ body {
     /* IMAGENES */
     #images div{
         height: 40vh;
+        border: solid black 1px;
     }
 
     /* ESCRÍBENOS */
-    
+
         /* FORMULARIO */
         #form{
             height: 100%;
@@ -457,6 +467,8 @@ body {
         #form #submit{
         font-size: var(--tam-fuente-sm);
         }
+        
+        
 
     
 }
@@ -467,313 +479,248 @@ body {
 
 
 
-
-
-
-
 /* Media queries lg */
 
 @media (min-width: 992px) {
-    * {
-        font-size: 4.5rem;
-    }
-    
-    .text{
-        text-align: left;
-        font-size: var(--tam-fuente-xs);
-    }
-    
-        /* HOME */
-        #home {
-            width: 100%;
-            height: 100vh;
-            border: solid black 1px;
+
+    /* GENERAL */
+
+* {
+    font-size: 2rem;
+}
+
+.text{
+    font-size: var(--tam-fuente-lg);
+}
+
+    /* HOME */
+   
+
+        /* HEADER */
+
+        #headermenu{
             display: flex;
-            flex-direction: column;
-    
+            justify-content: space-between;
         }
-    
-            /* HEADER */
-            #header {
-                background-color: var(--fondo-encabezado);
-                display: flex;
-                align-items: center;
-            }
-    
-            #header img {
-                width: 100px;
-                margin: 0;
-            }
-    
-            /* MENU */
-            #menu {
-                text-align: center;
-                background-color: white;
-            }
-    
-            #menu li {
-                height: 6.5vh;
-                margin: 0.5vh;
-                list-style: none;
-            }
-    
-            #menu li a {
-                text-decoration: none;
-                color: var(--color-opuesto-primario);
-            }
-    
-            #menu li:not(:last-child) {
-                border-bottom: solid 1px var(--color-opuesto-primario);
-            }
-    
-            /* INICIO */
-            #inicio{
-                height:100%;
-                display: flex;
-                align-items:center;
-                justify-content:center;
-                background-image:url(./img/casa-bosque-xs.jpg);
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-            }
-            #inicio #title {
-                display: flex;
-                align-items: center;
-                justify-content:center;
-                height: 33vh;
-                width: 75%;
-                border: solid 0.5px var(--color-titulos-claro);
-                border-radius: 10%;
-                text-align: center;
-                font-weight: bold;
-                background-color: var(--color-transparencia);
-                color: var(--color-titulos-claro);
-            }
-    
-            /* SOBRE NOSOTROS */
-            #aboutus{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-                height: 95vh;
-                background-image: url(./img/texture-1674066_640.jpg);
-            }
-            #aboutus p{
-                text-align: center;
-                color: var(--color-texto);
-            }
-    
-                /* IMAGEN */
-    
-                #casaCielo{
-                    border-radius: 5%;
-                    margin-top: 20%;
-                    height: 60%;
-                    background-image: url(./img/casa-cielo-xs.jpg);
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                }
-    
-            /* CONTENIDO */
-            #content{
-                width: 80%;
-                margin: 0 10%;
-            }
-    
-        /* MODELOS */
-        #models{
-            padding-top: 1vh;
+
+        /* MENU */
+        #menu {
+            background-color: var(--fondo-encabezado);
+        }
+
+        #menu ul{
             display: flex;
-            flex-direction: column;
-            text-align: center;
-            background-color: white;
         }
-        #models img{
-            width: 100%;
+
+        #menu li {
+            padding: 2vh 1vh;
         }
-    
-            /* IMAGEN */
-    
-            #casaBasica{
-                height: 32.5vh;
-                background-image: url(./img/casa-basica-xs.jpg);
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-            }
-        
-            /* BASICO */
-            #basic{
-                margin-top: 2vh;
-                height: 40vh;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            #basic .text{
-                width: 80%;
-            }
-    
-            /* GRANDE */
-            #big{
-                margin-top: 2vh;
-                height: 60vh;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            #big .text{
-                width: 80%;
-            }
-    
-                /* IMAGEN */
-                #casaGrande{
-                    height: 27.5vh;
-                    background-image: url(./img/casa-grande-xs.jpg);
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                }
-    
-            /* CON LAGO */
-            #lake{
-                margin-top: 5vh;
-                height: 75vh;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-                padding-bottom: 3vh;
-            }
-            #lake .text{
-                width: 80%;
-            }
-    
-                /* IMAGEN */
-                #casaLago{
-                    height: 40vh;
-                    background-image: url(./img/casa-lago-xs.jpg);
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                }
-    
-        /* IMAGENES */
-        #alone{
-            height: 32.5vh;
-            background-image: url(./img/alone-1867464-xs.jpg);
-        }
-        #architecture{
-            height: 32.5vh;
-            background-image: url(./img/architecture-1836070-xs.jpg);
-        }
-        #autumn{
-            height: 32.5vh;
-            background-image: url(./img/autumn-1748644-xs.jpg);
-        }
-        #apartment{
-            height: 32.5vh;
-            background-image: url(./img/apartment-3564955-xs.jpg);
-        }
-        #country{
-            height: 32.5vh;
-            background-image: url(./img/country-house-540796-xs.jpg);
-        }
-        #largeHome{
-            height: 32.5vh;
-            background-image: url(./img/large-home-389271-xs.jpg);
-        }
-    
-        #images{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-bottom: 5vh;
-            background-image: url(./img/texture-1674066_640.jpg);
-        }
-        #images div{
-            width: 80%;
-            border-radius: 5%;
-            margin-top: 4vh;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            border: 1px solid black;
-        }
-    
-        /* ESCRÍBENOS */
-        #writeus{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-bottom: 5vh;
-            background-image: url(./img/contacto-xs.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            height: 88vh;
-        }
-        #writeus p{
+
+        #menu li a {
+            text-decoration: none;
             color: var(--color-opuesto-primario);
         }
-        #writeus>*{
-            margin: 5vh 0;
+
+        #menu li a:hover{
+            color: var(--color-opuesto-secundario);
         }
-        
-            /* FORMULARIO */
-            #form{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 75%;
-                background-color: var(--color-transparencia);
-                padding: 5vh 0;
-                border-radius: 5%;
+
+        #menu li:not(:last-child) {
+            border-bottom: none;
+            border-right: 1.5px solid var(--blanco);
+        }
+
+        /* INICIO */
+        #inicio{
+            background-image:url(./img/casa-bosque-md.jpg);
+        }
+        #inicio #title {
+            border-radius: 20px;
+        }
+
+        #inicio #title p{
+            font-size: 3.5rem;
+        }
+
+        /* SOBRE NOSOTROS */
+
+            /* IMAGEN */
+
+            #casaCielo{
+                border-radius: 25px;
+                margin-top: 10%;
+                height: 100%;
+                background-image: url(./img/casa-cielo-md.jpg);
             }
-            #form p,label{
-                color: var(--blanco);
-            }
-            #form form{
-                width: 80%;
-                display: flex;
-                flex-direction: column;
-                align-items: left;
-            }
-            #form form textarea{
-                resize: none;
-            }
-            #form form {
-                margin-top: 5vh;
-            }
-            #form form *{
-                margin-bottom: 1vh;
-            }
-            #form #submit{
-            font-size: var(--tam-fuente-xs);
-            }
+
+        /* CONTENIDO */
+        #content{
+            width: 80%;
+            margin: 0 10%;
+        }
+
+    /* MODELOS */
+    #models{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #models *{
+        width: 100%;
+    }
     
-        /* FOOTER */
-        #footer{
-            height: 7.5vh;
-            background-color: var(--color-opuesto-primario);
-            color: var(--blanco);
+        /* BASICO */
+        #basic{
+            height: 40vh;
             display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        /* GRANDE */
+        #big{
+            height: 60vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+            /* IMAGEN */
+            #casaGrande{
+                height: 50vh;
+            }
+
+        /* CON LAGO */
+        #lake{
+            margin-top: 20vh;
+            height: 115vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
+            padding-bottom: 3vh;
         }
+        #lake .text{
+            width: 80%;
+        }
+
+            /* IMAGEN */
+            #casaLago{
+                height: 80vh;
+            }
+
+    /* IMAGENES */
+    #alone{
+        height: 32.5vh;
+        background-image: url(./img/alone-1867464-xs.jpg);
+    }
+    #architecture{
+        height: 32.5vh;
+        background-image: url(./img/architecture-1836070-xs.jpg);
+    }
+    #autumn{
+        height: 32.5vh;
+        background-image: url(./img/autumn-1748644-xs.jpg);
+    }
+    #apartment{
+        height: 32.5vh;
+        background-image: url(./img/apartment-3564955-xs.jpg);
+    }
+    #country{
+        height: 32.5vh;
+        background-image: url(./img/country-house-540796-xs.jpg);
+    }
+    #largeHome{
+        height: 32.5vh;
+        background-image: url(./img/large-home-389271-xs.jpg);
+    }
+
+    #images{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding-bottom: 5vh;
+        background-image: url(./img/texture-1674066_640.jpg);
+    }
+    #images p{
+        width: 100%;
+        text-align: center;
+    }
+    #images div{
+        width: 45%;
+        border-radius: 25px;
+    }
+
+    /* ESCRÍBENOS */
+    #writeus{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 5vh;
+        background-image: url(./img/contacto-xs.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+    #writeus p{
+        color: var(--color-opuesto-primario);
+    }
+    #writeus>*{
+        margin: 5vh 0;
+    }
     
-        /* ARROW */
-        #arrow{
-            width: 5vh;
-            position: fixed;
-            bottom: 1vh;
-            right: 2%;
+        /* FORMULARIO */
+        #form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 75%;
+            background-color: var(--color-transparencia);
+            padding: 5vh 0;
+            border-radius: 5%;
         }
+        #form p,label{
+            color: var(--blanco);
+        }
+        #form form{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+        }
+        #form form textarea{
+            resize: none;
+        }
+        #form form {
+            margin-top: 5vh;
+        }
+        #form form *{
+            margin-bottom: 1vh;
+        }
+        #form #submit{
+        font-size: var(--tam-fuente-xs);
+        }
+
+    /* FOOTER */
+    #footer{
+        height: 7.5vh;
+        background-color: var(--color-opuesto-primario);
+        color: var(--blanco);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* ARROW */
+    #arrow{
+        width: 5vh;
+        height: 5vh;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-image: url(./img/arrow-24846.svg);
+    }
 }
 
 /* Media queries xl */

@@ -49,7 +49,7 @@ body {
 }
 
 * {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
 
 .text{
@@ -61,7 +61,6 @@ body {
     #home {
         width: 100%;
         height: 100vh;
-        border: solid black 1px;
         display: flex;
         flex-direction: column;
 
@@ -277,6 +276,7 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        border: solid black 1px;
     }
 
     /* ESCRÍBENOS */
@@ -343,20 +343,29 @@ body {
     /* ARROW */
     #arrow{
         width: 5vh;
+        height: 5vh;
         position: fixed;
-        bottom: 1vh;
-        right: 2%;
+        bottom: 20px;
+        right: 20px;
+        background-image: url(./img/arrow-24846.svg);
     }
 
 /* Media queries sm */
 
 @media (min-width: 576px) {
+
+    /* GENERAL */
     .text{
         font-size: var(--tam-fuente-sm);
     }
 
     #inicio{
         background-image:url(./img/casa-bosque-sm.jpg);
+    }
+
+    /* ESCRÍBENOS */
+    #writeus{
+        height: 90vh;
     }
 }
 
