@@ -25,6 +25,9 @@
     --color-enlace-hover: var(--color-opuesto-secundario);
     --color-transparencia: rgba(0, 0, 0, 0.5);
 }
+/* ----------------------------------------------------- */
+                        /* Base */
+/* ----------------------------------------------------- */
 
 /* GENERAL */
 * {
@@ -52,7 +55,7 @@ body {
     font-size: 1.5rem;
 }
 
-.text{
+.text, #icon{
     text-align: left;
     font-size: var(--tam-fuente-xs);
 }
@@ -151,7 +154,7 @@ body {
             }
 
         /* CONTENIDO */
-        #content{
+        #aboutus #content{
             width: 80%;
             margin: 0 10%;
         }
@@ -350,12 +353,14 @@ body {
         background-image: url(./img/arrow-24846.svg);
     }
 
-/* Media queries sm */
+/* ----------------------------------------------------- */
+                    /* Media queries sm */
+/* ----------------------------------------------------- */
 
 @media (min-width: 576px) {
 
     /* GENERAL */
-    .text{
+    .text, #icon{
         font-size: var(--tam-fuente-sm);
     }
 
