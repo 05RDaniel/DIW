@@ -189,9 +189,12 @@ body {
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
+            align-content: center;
+            padding-top: 7.5vh;
         }
         #basic .text{
-            width: 80%;
+            width: 100%;
+            padding: 0 10%;
         }
 
         /* GRANDE */
@@ -203,17 +206,25 @@ body {
             flex-wrap: wrap;
             justify-content: center;
         }
+        #big #content{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            height: 27vh;
+        }
         #big .text{
-            width: 80%;
+            width: 100%;
+            padding: 0 10%;
         }
 
             /* IMAGEN */
             #casaGrande{
-                height: 27.5vh;
+                height: 25vh;
                 background-image: url(./img/casa-grande-xs.jpg);
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;
+                margin-top: 1%;
             }
 
         /* CON LAGO */
@@ -221,13 +232,18 @@ body {
             margin-top: 5vh;
             height: 75vh;
             display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+            flex-direction: column;
             justify-content: center;
             padding-bottom: 3vh;
         }
+        #lake #content{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
         #lake .text{
-            width: 80%;
+            width: 100%;
+            padding: 0 10%;
         }
 
             /* IMAGEN */
@@ -444,6 +460,11 @@ body {
         }
         #lake .text{
             width: 80%;
+        }
+
+        /* IMAGEN */
+        #casaLago{
+            background-image: url(./img/casa-lago-xs.jpg);
         }
 
     /* IMAGENES */
@@ -699,8 +720,8 @@ body {
     }
 
     body {
-        width: 75%;
-        margin-left: 12.5%;
+        width: 1200px;
+        margin: auto;
     }
     
     .text, #icon{
@@ -787,6 +808,10 @@ body {
                 margin-top: -52.5%;
             }
 
+            #basic p:not(.text){
+                margin-bottom: 5%;
+            }
+
             #basic .text{
                 width: 80%;
                 margin-top: -5%;
@@ -811,25 +836,27 @@ body {
                 flex-direction: row;
                 flex-wrap: wrap;
                 background-color: var(--blanco);
+                margin-top: 5vh;
             }
             #big #content{
                 z-index: 1;
                 margin-left: 45%;
-                margin-top: 1%;
+                margin-top: 0%;
                 padding-top: 3%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 background-color: var(--blanco);
                 width: 55%;
+                height: auto;
             }
     
                 /* IMAGEN */
                 #casaGrande{
                     height: 60vh;
                     width: 75%;
-                    margin-left: -25%;
-                    margin-top: -25%;
+                    margin-left: -22.5%;
+                    margin-top: -20%;
                     background-image: url(./img/casa-grande-xl.jpg);
                 }
     
@@ -845,8 +872,8 @@ body {
             #lake #content{
                 margin-right: 45%;
                 width: 55%;
-                margin-top: 7%;
-                padding-top: 2%;
+                margin-top: 5%;
+                padding-top: 0%;
                 height: 40vh;
                 display: flex;
                 flex-direction: column;
@@ -862,8 +889,8 @@ body {
                 #casaLago{
                     height: 75vh;
                     width: 74%;
-                    margin-left: 25%;
-                    margin-top: -45%;
+                    margin-left: 24%;
+                    margin-top: -40%;
                     background-image: url(./img/casa-lago-xl.jpg);
                 }
 }
