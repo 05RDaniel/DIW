@@ -1,0 +1,73 @@
+#sword{
+    position: absolute;
+    background-image: url(./imgs/Sword.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-fill-mode: forwards;
+    width: 50px;
+    height: 200px;
+        animation-name: right-to-left;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        
+}
+#sword2{
+    position: absolute;
+    background-image: url(./imgs/Sword.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-fill-mode: forwards;
+    width: 50px;
+    height: 200px;
+        animation-name: right-to-left2;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        
+}
+
+#solaire{
+    background-image: url(./imgs/Solaire.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    width: 400px;
+    height: 1600px;
+}
+
+
+
+@keyframes right-to-left {
+    0% {
+        margin-left: 0%;
+    }
+    50% {
+        transform: rotate(220deg);
+        margin-left: 45%;
+    }
+    75% {
+        transform: rotate(400deg);
+        margin-left: 25%;
+    }
+    100% {
+        transform: rotate(580deg);
+        margin-left: 45%;
+    }
+}
+@keyframes right-to-left2 {
+    0% {
+        margin-left: 90%;
+    }
+    50% {
+        transform: rotate(-220deg);
+        margin-left: 45%;
+    }
+    75% {
+        transform: rotate(-400deg);
+        margin-left: 65%;
+    }
+    100% {
+        transform: rotate(-580deg);
+        margin-left: 45%;
+    }
+}
