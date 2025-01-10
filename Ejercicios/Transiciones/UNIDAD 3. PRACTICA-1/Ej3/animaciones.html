@@ -11,13 +11,15 @@
     <div id="sword2"></div>
     <div id="solaire"></div>
     <script>
-        solaire = document.getElementById("solaire")
-        solaire.addEventListener("mouseover", function (){
-            solaire.style.backgroundImage= 'url("./img/SolaireIluminado.png")'
-        });
-        solaire.addEventListener("mouseout", function (){
-            solaire.style.backgroundImage= 'url("./img/Solaire.png")'
-        });
+        const solaire = document.getElementById("solaire");
+        if (solaire) {
+            solaire.addEventListener("mouseover", function () {
+                solaire.style.backgroundImage = 'url("./imgs/SolaireIluminado.png")';
+            });
+            solaire.addEventListener("mouseout", function () {
+                solaire.style.backgroundImage = 'url("./imgs/Solaire.png")';
+            });
+        }
     </script>
 </body>
 </html>
