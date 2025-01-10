@@ -31,8 +31,9 @@
     background-image: url(./imgs/Solaire.png);
     background-repeat: no-repeat;
     background-size:contain;
+    margin: 50vh auto;
     width: 400px;
-    height: 1600px;
+    height: 600px;
 }
 
 
