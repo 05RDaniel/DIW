@@ -1,3 +1,9 @@
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+}
 #sword{
     position: absolute;
     background-image: url(./imgs/Sword.png);
@@ -7,9 +13,11 @@
     width: 50px;
     height: 200px;
         animation-name: right-to-left;
-        animation-duration: 1s;
+        animation-duration: 2s;
         animation-iteration-count: 1;
         animation-timing-function: ease-in;
+        z-index: 1;
+        margin-top: 3vh;
         
 }
 #sword2{
@@ -21,54 +29,177 @@
     width: 50px;
     height: 200px;
         animation-name: right-to-left2;
-        animation-duration: 1s;
+        animation-duration: 2s;
         animation-iteration-count: 1;
         animation-timing-function: ease-in;
+        z-index: 1;
+        margin-top: 3vh;
         
 }
+
+#swords{
+    height: 250px;
+}
+
+#container{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
 
 #solaire{
     background-image: url(./imgs/Solaire.png);
     background-repeat: no-repeat;
     background-size:contain;
-    margin: 50vh auto;
-    width: 400px;
-    height: 600px;
+    margin: 20vh auto 0 auto;
+    width: 270px;
+    height: 400px;
 }
 
+#sun{
+    position: absolute;
+    left: 43.5%;
+    top: -50vh;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background: none;
+}
 
+#back{
+    background-image: url(./imgs/FondoMedieval.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#solaritos{
+    position: absolute;
+    left: 36.5%;
+    bottom: -50%;
+    background-image: url(./imgs/Solaritos.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    width: 550px;
+    height: 200px;
+}
+
+.sundown{
+    animation-name: praise-the-sun;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.sunup{
+    animation-name: unpraise-the-sun;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.crowd{
+    animation-name: solaire-crowd;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes solaire-crowd{
+    0%{
+        bottom: -50%;
+    }
+    50%{
+        bottom: 0%;
+    }
+    100%{
+        bottom: -50%;
+    }
+}
+
+@keyframes praise-the-sun{
+    0%{
+        top: -50vh;
+        background: none;
+    }
+    75%{
+        top: 20vh;
+        background: radial-gradient(white, lightgoldenrodyellow);
+    }
+    100%{
+        background: radial-gradient(gold, yellow);
+        top: 20vh;
+    }
+}
+
+@keyframes unpraise-the-sun{
+    0%{
+        background: radial-gradient(gold, yellow);
+        top: 20vh;
+    }
+    25%{
+        top: 20vh;
+        background: radial-gradient(white, lightgoldenrodyellow);
+    }
+    100%{
+        top: -50vh;
+        background: none;
+    }
+}
 
 @keyframes right-to-left {
     0% {
         margin-left: 0%;
     }
-    50% {
+    20% {
         transform: rotate(220deg);
-        margin-left: 45%;
+        margin-left: 40%;
     }
-    75% {
+    35% {
         transform: rotate(400deg);
-        margin-left: 25%;
+        margin-left: 20%;
+    }
+    50% {
+        transform: rotate(580deg);
+        margin-left: 48.3%;
+    }
+    85% {
+        transform: rotate(580deg);
+        margin-left: 48.3%;
     }
     100% {
-        transform: rotate(580deg);
-        margin-left: 45%;
+        transform: rotate(580deg) scale(0.5, 0.5);
+        margin-left: 1%;
     }
 }
 @keyframes right-to-left2 {
     0% {
-        margin-left: 90%;
+        margin-left: 100%;
+    }
+    20% {
+        transform: rotate(-220deg);
+        margin-left: 40%;
+    }
+    35% {
+        transform: rotate(-400deg);
+        margin-left: 70%;
     }
     50% {
-        transform: rotate(-220deg);
-        margin-left: 45%;
+        transform: rotate(-580deg);
+        margin-left: 48.3%;
     }
-    75% {
-        transform: rotate(-400deg);
-        margin-left: 65%;
+    85%{
+        transform: rotate(-580deg);
+        margin-left: 48.3%;
+
     }
     100% {
-        transform: rotate(-580deg);
-        margin-left: 45%;
+        transform: rotate(-580deg) scale(0.5, 0.5);
+        margin-left: 1%;
     }
 }
