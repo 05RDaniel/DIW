@@ -1,10 +1,11 @@
-body{
+body {
     overflow-x: hidden;
     overflow-y: hidden;
     margin: 0;
     padding: 0;
 }
-#sword{
+
+#sword {
     position: absolute;
     background-image: url(./imgs/Sword.png);
     background-repeat: no-repeat;
@@ -12,54 +13,51 @@ body{
     animation-fill-mode: forwards;
     width: 50px;
     height: 200px;
-        animation-name: right-to-left;
-        animation-duration: 2s;
-        animation-iteration-count: 1;
-        animation-timing-function: ease-in;
-        z-index: 1;
-        margin-top: 3vh;
-        
-}
-#sword2{
-    position: absolute;
-    background-image: url(./imgs/Sword.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    animation-fill-mode: forwards;
-    width: 50px;
-    height: 200px;
-        animation-name: right-to-left2;
-        animation-duration: 2s;
-        animation-iteration-count: 1;
-        animation-timing-function: ease-in;
-        z-index: 1;
-        margin-top: 3vh;
-        
+    animation-name: right-to-left;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    top: 3vh;
+
 }
 
-#swords{
+#sword2 {
+    position: absolute;
+    background-image: url(./imgs/Sword.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-fill-mode: forwards;
+    width: 50px;
+    height: 200px;
+    animation-name: left-to-right;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    top: 3vh;
+
+}
+
+#swords {
     height: 250px;
 }
 
-#container{
+#container {
     width: 100%;
     height: 100vh;
     margin: 0;
     padding: 0;
 }
 
-
-
-#solaire{
+#solaire {
     background-image: url(./imgs/Solaire.png);
     background-repeat: no-repeat;
-    background-size:contain;
-    margin: 20vh auto 0 auto;
+    background-size: contain;
+    margin: 0 auto 0 auto;
     width: 270px;
     height: 400px;
 }
 
-#sun{
+#sun {
     position: absolute;
     left: 43.5%;
     top: -50vh;
@@ -69,24 +67,56 @@ body{
     background: none;
 }
 
-#back{
-    background-image: url(./imgs/FondoMedieval.png);
+#back {
+    margin: 0;
+    background-image: url(./imgs/fondo.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#solaritos{
+#solaritos {
     position: absolute;
-    left: 36.5%;
-    bottom: -50%;
+    left: 10%;
+    bottom: -30%;
     background-image: url(./imgs/Solaritos.png);
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size: contain;
     width: 550px;
     height: 200px;
 }
 
-.sundown{
+#solaritos2 {
+    position: absolute;
+    left: 60%;
+    bottom: -30%;
+    background-image: url(./imgs/Solaritos.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 550px;
+    height: 200px;
+}
+
+#title {
+    padding-top: 5vh;
+    width: fit-content;
+    margin: auto;
+}
+
+#title h1 {
+    margin: 0;
+    border-top: 3px black dashed;
+    border-bottom: 3px black dashed;
+    width: fit-content;
+}
+
+#subtitle {
+    margin-top: 11vh;
+    margin-left: 2%;
+    width: fit-content;
+    text-align: center;
+}
+
+.sundown {
     animation-name: praise-the-sun;
     animation-duration: 3s;
     animation-iteration-count: 1;
@@ -94,7 +124,7 @@ body{
     animation-fill-mode: forwards;
 }
 
-.sunup{
+.sunup {
     animation-name: unpraise-the-sun;
     animation-duration: 3s;
     animation-iteration-count: 1;
@@ -102,104 +132,126 @@ body{
     animation-fill-mode: forwards;
 }
 
-.crowd{
+.crowd {
     animation-name: solaire-crowd;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     animation-iteration-count: 1;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
 
-@keyframes solaire-crowd{
-    0%{
-        bottom: -50%;
+/* Animación para los grupos de personajes */
+@keyframes solaire-crowd {
+    0% {
     }
-    50%{
+
+    50% {
         bottom: 0%;
     }
-    100%{
+
+    100% {
         bottom: -50%;
     }
 }
 
-@keyframes praise-the-sun{
-    0%{
+
+/* Animación para el sol */
+@keyframes praise-the-sun {
+    0% {
         top: -50vh;
         background: none;
     }
-    75%{
+
+    75% {
         top: 20vh;
         background: radial-gradient(white, lightgoldenrodyellow);
     }
-    100%{
+
+    100% {
         background: radial-gradient(gold, yellow);
         top: 20vh;
     }
 }
 
-@keyframes unpraise-the-sun{
-    0%{
+/* Animación de retirada del sol */
+@keyframes unpraise-the-sun {
+    0% {
         background: radial-gradient(gold, yellow);
         top: 20vh;
     }
-    25%{
+
+    25% {
         top: 20vh;
         background: radial-gradient(white, lightgoldenrodyellow);
     }
-    100%{
+
+    100% {
         top: -50vh;
         background: none;
     }
 }
 
+/* Animación de la espada de la izquierda */
 @keyframes right-to-left {
     0% {
         margin-left: 0%;
     }
+
     20% {
         transform: rotate(220deg);
         margin-left: 40%;
     }
+
     35% {
         transform: rotate(400deg);
         margin-left: 20%;
     }
+
     50% {
         transform: rotate(580deg);
         margin-left: 48.3%;
     }
+
     85% {
         transform: rotate(580deg);
         margin-left: 48.3%;
     }
+
     100% {
         transform: rotate(580deg) scale(0.5, 0.5);
-        margin-left: 1%;
+        margin-left: 3%;
     }
 }
-@keyframes right-to-left2 {
+
+/* Animación de la espada de la derecha */
+@keyframes left-to-right {
     0% {
         margin-left: 100%;
     }
+
     20% {
         transform: rotate(-220deg);
         margin-left: 40%;
     }
+
     35% {
         transform: rotate(-400deg);
         margin-left: 70%;
     }
+
     50% {
         transform: rotate(-580deg);
         margin-left: 48.3%;
     }
-    85%{
+
+    85% {
         transform: rotate(-580deg);
         margin-left: 48.3%;
 
     }
+
     100% {
         transform: rotate(-580deg) scale(0.5, 0.5);
-        margin-left: 1%;
+        margin-left: 3%;
     }
 }

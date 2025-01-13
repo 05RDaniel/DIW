@@ -11,16 +11,23 @@
 <body>
     <div id="back">
         <div id="container">
+            <div id="title">
+                <h1>Praise the Sun!</h1>
+            </div>
+            <div id="subtitle">
+                <h3>The Sunny <br> Armory</h3>
+            </div>
             <div id="swords">
                 <div id="sword"></div>
                 <div id="sword2"></div>
             </div>
+            <div id="solaritos"></div>
+            <div id="solaritos2"></div>
             <div id="characters">
                 <div id="solaire"></div>
             </div>
             <div id="sun">
             </div>
-            <div id="solaritos"></div>
         </div>
     </div>
 </body>
@@ -29,25 +36,38 @@
     const sun = document.getElementById("sun");
     const container = document.getElementById("container");
     const solaritos = document.getElementById("solaritos")
+    const solaritos2 = document.getElementById("solaritos2")
     if (solaire) {
+        /* Al hacer click en el personaje principal, los dos grupos de personajes harán su respectiva animación */
         solaire.addEventListener("click", function () {
             solaritos.className = "crowd"
+            solaritos2.className = "crowd"
             solaritos.addEventListener("animationend",crowdAnimationEnd);
+            solaritos2.addEventListener("animationend",crowdAnimationEnd);
         })
+
+        /* Al colocar el ratón sobre el personaje principal, iniciará una animación */
         solaire.addEventListener("mouseover", function () {
             which = 1;
             sun.className = "sundown";
             sun.addEventListener("animationend",sunAnimationEnd);
         });
+        
+        /* Al quitar el ratón de encima del personaje principal, iniciará una animación */
         solaire.addEventListener("mouseout", function () {
             which = 0;
             container.style.background = 'none';
             sun.className = "sunup";
         });
     }
+
+    /* Quitamos los grupos de personajes de la clase animada para poder repetir la animación */
     function crowdAnimationEnd() {
         solaritos.classList.remove("crowd");
+        solaritos2.classList.remove("crowd");
     }
+
+    /* Función para animar el fondo al acabar la animación del sol con un controlador para comprobar que animación ha finalizado */
     function sunAnimationEnd() {
         const container = document.getElementById("container");
         if(which == 1){
