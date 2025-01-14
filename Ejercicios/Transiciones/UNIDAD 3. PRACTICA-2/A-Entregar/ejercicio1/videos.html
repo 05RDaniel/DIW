@@ -31,14 +31,14 @@
                 </div>
             </div>
             <nav>
-                <input type="button" id="reiniciar" value="reiniciar" />
-                <input type="button" id="retrasar" value="&laquo;" />
-                <input type="button" id="play" value="&#9658;" />
-                <input type="button" id="adelantar" value="&raquo;" />
-                <input type="button" id="silenciar" value="silenciar" />
+                <input type="button" id="reiniciar" onclick="reiniciar()" value="reiniciar" />
+                <input type="button" id="retrasar" onclick="retroceder()" value="&laquo;" />
+                <input type="button" id="play" onclick="changeValue()" value="►" />
+                <input type="button" id="adelantar" onclick="avanzar()" value="&raquo;" />
+                <input type="button" id="silenciar" onclick="silenciar()" value="silenciar" />
                 <label>Volumen</label>
-                <input type="button" id="menosVolumen" value="-" />
-                <input type="button" id="masVolumen" value="+" />
+                <input type="button" id="menosVolumen" onclick="volumeDown()" value="-" />
+                <input type="button" id="masVolumen" onclick="volumeUp()" value="+" />
             </nav>
         </section>
         <footer>
@@ -46,7 +46,8 @@
             <p>Impartido para: <a href="http://cefire.edu.gva.es"> CEFIRE - Específico de Formación
                     Profesional</a></p>
         </footer>
-    </div>
+
+        <script src="./js/reproductor.js"></script>
 </body>
 
 </html>
