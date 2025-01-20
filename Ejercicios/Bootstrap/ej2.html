@@ -13,29 +13,38 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container text-center">
       <div class="row">
-        <div class="col-12 green">Header</div>
         <div class="row">
-          <div class="col-6 blue l">1</div>
-          <div class="col-6 blue l">2</div>
-          <div class="col-6 blue l">3</div>
-          <div class="col-6 blue l">4</div>
+          <div class="col-12 green">Header</div>
         </div>
         <div class="row">
-          <div class="col-6 grey l">a</div>
-          <div class="col-6 grey l">b</div>
-          <div class="col-6 grey l">c</div>
-          <div class="col-6 grey l">d</div>
+          <div class="col-6 col-sm-3 offset-md-3 blue l">1</div>
+          <div class="col-6 col-sm-3 blue l">2</div>
+          <div class="d-none d-md-block w-100"></div>
+          <div class="col-6 col-sm-3 blue l">3</div>
+          <div class="col-6 col-sm-3 offset-md-6 blue blue l">4</div>
         </div>
         <div class="row">
-          <div class="col-12 lblue">Mobile</div>
+          <div class="d-none d-sm-block d-md-none lblue">Tablet</div>
         </div>
         <div class="row">
-          <div class="col-12 orange">:D</div>
-          <div class="d-none col orange">:(</div>
+          <div class="col-6 col-sm-3 order-md-4 grey l">a</div>
+          <div class="col-6 col-sm-3 order-md-3 grey l">b</div>
+          <div class="col-6 col-sm-3 order-md-2 grey l">c</div>
+          <div class="col-6 col-sm-3 order-md-1 grey l">d</div>
         </div>
-        <div class="col-12 green">Header</div>
+        <div class="row">
+          <div class="d-none d-md-block lblue">Desktop</div>
+          <div class="col-12 d-sm-none lblue">Mobile</div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-3 offset-md-3 orange l">:D</div>
+          <div class="d-none d-sm-block col-sm-6 col-md-3 orange l">:(</div>
+        </div>
+        <div class="row">
+          <div class="d-none d-sm-block green">Footer</div>
+        </div>
       </div>
     </div>
     <style>
