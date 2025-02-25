@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container mt-4">
+        <nav class="navbar navbar-expand-lg navbar-primary bg-primary">
+            <div class="container">
+                <a class="navbar-brand text-white" href="index.html">Inicio</a>
+                <div class="collapse navbar-collapse" id="navbarContact">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="about.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                Servicios
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Consultoría</a></li>
+                                <li><a class="dropdown-item" href="#">Desarrollo</a></li>
+                                <li class="dropend">
+                                    <a class="dropdown-item dropend-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                        Soportes >
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="#">Soporte Técnico</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item dropend-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                                Soportes al cliente >
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Soporte 1</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Soporte 2</a>
+                                                </li>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>       
+        
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                <li class="breadcrumb-item">
+                    <a href="about.html">Sobre Nosotros</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Contacto</li>
+            </ol>
+        </nav>
+
+        <h1>Contacto</h1>
+
+        <!-- Formulario -->
+        <form>
+            <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Mensaje</label>
+                <textarea class="form-control" rows="3" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-success">Enviar</button>
+        </form>
+
+        <br />
+        <a href="index.html" class="btn btn-primary">Volver al Inicio</a>
+        <a href="about.html" class="btn btn-info">Ir a Sobre Nosotros</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
